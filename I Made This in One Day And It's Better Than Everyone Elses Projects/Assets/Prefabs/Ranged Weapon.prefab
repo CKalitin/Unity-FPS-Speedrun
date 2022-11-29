@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2533035193639774505}
-  - component: {fileID: 2533035193639774506}
   - component: {fileID: 2533035193639774508}
+  - component: {fileID: 2533035193639774506}
+  - component: {fileID: -6769479777937699097}
   m_Layer: 0
   m_Name: Ranged Weapon
   m_TagString: Untagged
@@ -34,23 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2533035193639774506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2533035193639774504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf8a836f7278b7e4c805a4f82fa2cea3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rateOfFire: 0.33
-  shotDamage: 2
-  shotRange: 100
-  shootPosition: {fileID: 6316068176749703681}
-  animator: {fileID: 2533035193639774508}
 --- !u!95 &2533035193639774508
 Animator:
   serializedVersion: 4
@@ -71,6 +55,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2533035193639774506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2533035193639774504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8a836f7278b7e4c805a4f82fa2cea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rateOfFire: 0.33
+  shotDamage: 2
+  shotRange: 100
+  shootPosition: {fileID: 6316068176749703681}
+  damager: {fileID: -6769479777937699097}
+  animator: {fileID: 2533035193639774508}
+--- !u!114 &-6769479777937699097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2533035193639774504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a593ea89f86afdb4abb5752e82cf68fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTags: []
 --- !u!1 &2533035193767513396
 GameObject:
   m_ObjectHideFlags: 0

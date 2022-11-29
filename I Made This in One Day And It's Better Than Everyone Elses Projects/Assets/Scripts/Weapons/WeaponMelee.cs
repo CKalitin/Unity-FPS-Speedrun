@@ -11,9 +11,9 @@ public class WeaponMelee : MonoBehaviour {
     [Tooltip("Get all health components in sphere of radius attack range from this point.")]
     [SerializeField] private Transform attackPosition;
     [Space]
+    [SerializeField] private Damager damager;
     [Tooltip("Uses 'Attack' trigger")]
     [SerializeField] private Animator animator;
-    [SerializeField] private Health selfHealth;
     
     bool coolingDownAttack = false;
     
@@ -29,12 +29,7 @@ public class WeaponMelee : MonoBehaviour {
     }
 
     private void DealDamage() {
-        Collider[] colliders = Physics.OverlapSphere(attackPosition.position, attackRange);
-
-        for (int i = 0; i < colliders.Length; i++) {
-            Health health = colliders[i].GetComponent<Health>();
-            if (health & health != selfHealth) health.ChangeHealth(-Mathf.Abs(attackDamage));
-        }
+        damager.DealDamage(Physics.OverlapSphere(attackPosition.position, attackRange), -Mathf.Abs(attackDamage));
     }
 
     private void ResetCanShoot() {

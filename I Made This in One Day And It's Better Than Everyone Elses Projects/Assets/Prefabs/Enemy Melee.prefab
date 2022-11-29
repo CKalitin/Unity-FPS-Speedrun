@@ -95,12 +95,12 @@ GameObject:
   - component: {fileID: 8304701930286078107}
   - component: {fileID: 26620297938654500}
   - component: {fileID: 8304701930286078104}
+  - component: {fileID: 3205452042387112669}
   - component: {fileID: 7025293883495116810}
   - component: {fileID: 1080379911595426134}
-  - component: {fileID: 3205452042387112669}
   m_Layer: 0
   m_Name: Enemy Melee
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,6 +175,19 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   navMeshAgent: {fileID: 8304701930286078107}
   pathfind: 1
+--- !u!65 &3205452042387112669
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8304701930286078108}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.8, y: 1, z: 0.8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7025293883495116810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,19 +218,6 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   destroyOnZeroHealth: 1
---- !u!65 &3205452042387112669
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8304701930286078108}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8, y: 1, z: 0.8}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4926495033484292183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -226,12 +226,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 8304701930286078106}
     m_Modifications:
     - target: {fileID: 5798688976128762512, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
+      propertyPath: damager
+      value: 
+      objectReference: {fileID: 3672724796666609018}
+    - target: {fileID: 5798688976128762512, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
       propertyPath: selfHealth
       value: 
       objectReference: {fileID: 1080379911595426134}
     - target: {fileID: 5798688976128762525, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
       propertyPath: m_Name
       value: Melee Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798688976128762525, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5798688976128762526, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
       propertyPath: m_RootOrder
@@ -277,6 +285,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8549607390731455789, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
+      propertyPath: targetTags.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549607390731455789, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
+      propertyPath: targetTags.Array.data[0]
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549607390731455789, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
+      propertyPath: targetTags.Array.data[1]
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5798688976128762527, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
@@ -296,3 +316,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5798688976128762526, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
   m_PrefabInstance: {fileID: 4926495033484292183}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3672724796666609018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8549607390731455789, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
+  m_PrefabInstance: {fileID: 4926495033484292183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a593ea89f86afdb4abb5752e82cf68fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

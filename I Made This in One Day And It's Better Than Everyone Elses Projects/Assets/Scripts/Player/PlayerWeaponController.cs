@@ -29,7 +29,7 @@ public class PlayerWeaponController : MonoBehaviour {
     #region Using Weapons
 
     private void Attack() {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+        if (Input.GetKey(KeyCode.Mouse0)) {
             if (weapons[currentWeaponIndex].weapon.GetComponent<WeaponMelee>())
                 weapons[currentWeaponIndex].weapon.GetComponent<WeaponMelee>().Attack();
             else if (weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>())
