@@ -71,6 +71,8 @@ MonoBehaviour:
   shotDamage: 2
   shotRange: 100
   shootPosition: {fileID: 6316068176749703681}
+  ammoType: 1
+  ammoAmount: 1000
   damager: {fileID: -6769479777937699097}
   animator: {fileID: 2533035193639774508}
 --- !u!114 &-6769479777937699097

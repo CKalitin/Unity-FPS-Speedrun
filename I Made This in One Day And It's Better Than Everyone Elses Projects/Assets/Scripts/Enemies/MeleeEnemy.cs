@@ -9,7 +9,7 @@ public class MeleeEnemy : MonoBehaviour {
     [SerializeField] private WeaponMelee meleeWeapon;
     
     private void Update() {
-        if (Vector3.Distance(transform.position, enemyPathfinding.playerTransform.position) <= attackDistance) {
+        if (Vector3.Distance(transform.position, enemyPathfinding.PlayerTransform.position) <= attackDistance) {
             meleeWeapon.Attack();
         }
     }

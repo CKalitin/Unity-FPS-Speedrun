@@ -10,9 +10,13 @@ public class PlayerWeaponController : MonoBehaviour {
 
     float currentMouseScrollDelta;
 
+    public int CurrentWeaponIndex { get => currentWeaponIndex; }
+    public WeaponStruct[] Weapons { get => weapons; }
+
     [Serializable]
-    private struct WeaponStruct {
+    public struct WeaponStruct {
         public GameObject weapon;
+        public string weaponTag;
         public bool available;
     }
     #endregion
@@ -29,7 +33,7 @@ public class PlayerWeaponController : MonoBehaviour {
     #region Using Weapons
 
     private void Attack() {
-        if (Input.GetKey(KeyCode.Mouse0)) {
+        if (Input.GetKey(KeyCode.Mouse0) && weapons[currentWeaponIndex].available) {
             if (weapons[currentWeaponIndex].weapon.GetComponent<WeaponMelee>())
                 weapons[currentWeaponIndex].weapon.GetComponent<WeaponMelee>().Attack();
             else if (weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>())
@@ -81,8 +85,8 @@ public class PlayerWeaponController : MonoBehaviour {
         }
     }
 
-    private void SetWeapon(int _weaponIndex) {
-        if (weapons[currentWeaponIndex].available) {
+    public void SetWeapon(int _weaponIndex) {
+        if (weapons[_weaponIndex].available) {
             weapons[currentWeaponIndex].weapon.SetActive(false);
             currentWeaponIndex = _weaponIndex;
             weapons[currentWeaponIndex].weapon.SetActive(true);

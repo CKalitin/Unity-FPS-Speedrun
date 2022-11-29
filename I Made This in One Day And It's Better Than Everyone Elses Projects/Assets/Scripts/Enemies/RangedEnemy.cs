@@ -15,12 +15,10 @@ public class RangedEnemy : MonoBehaviour {
         RotateTowardsPlayer();
         
         RaycastHit hit;
-        Debug.DrawRay(rangedWeapon.shootPosition.position, rangedWeapon.shootPosition.forward * 5, Color.red);
-        if (Physics.Raycast(rangedWeapon.shootPosition.position, rangedWeapon.shootPosition.forward, out hit, 100)) {
-            if (Vector3.Distance(transform.position, enemyPathfinding.playerTransform.position) <= attackDistance)
+        if (Physics.Raycast(rangedWeapon.ShootPosition.position, rangedWeapon.ShootPosition.forward, out hit, rangedWeapon.ShotRange)) {
+            if (Vector3.Distance(transform.position, enemyPathfinding.PlayerTransform.position) <= attackDistance)
                 rangedWeapon.Shoot();
         }
-        Debug.Log(hit.collider.transform);
     }
 
     private void LateUpdate() {
@@ -28,7 +26,7 @@ public class RangedEnemy : MonoBehaviour {
     }
 
     private void RotateTowardsPlayer() {
-        Vector3 targetDirection = (enemyPathfinding.playerTransform.position - transform.position).normalized;
+        Vector3 targetDirection = (enemyPathfinding.PlayerTransform.position - transform.position).normalized;
         
         Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
         targetRotation.y = 0;

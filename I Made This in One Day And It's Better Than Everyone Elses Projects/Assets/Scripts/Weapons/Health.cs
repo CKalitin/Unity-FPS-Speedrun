@@ -12,7 +12,7 @@ public class Health : MonoBehaviour {
     public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
 
     private void Awake() {
-        currentHealth = maxHealth;
+        //currentHealth = maxHealth;
     }
     
     public void ChangeHealth(float _damage) {

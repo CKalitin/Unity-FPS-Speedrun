@@ -10,7 +10,8 @@ public class WeaponMelee : MonoBehaviour {
     [SerializeField] private float dealDamageDelay;
     [Tooltip("Get all health components in sphere of radius attack range from this point.")]
     [SerializeField] private Transform attackPosition;
-    [Space]
+
+    [Header("Other")]
     [SerializeField] private Damager damager;
     [Tooltip("Uses 'Attack' trigger")]
     [SerializeField] private Animator animator;

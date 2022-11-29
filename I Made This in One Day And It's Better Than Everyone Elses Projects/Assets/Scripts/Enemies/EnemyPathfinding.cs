@@ -4,11 +4,15 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyPathfinding : MonoBehaviour {
-    [SerializeField] public Transform playerTransform;
+    [SerializeField] private Transform playerTransform;
     [Space]
-    [SerializeField] public NavMeshAgent navMeshAgent;
+    [SerializeField] private NavMeshAgent navMeshAgent;
     [Space]
-    public bool pathfind = true;
+    private bool pathfind = true;
+
+    public Transform PlayerTransform { get => playerTransform; set => playerTransform = value; }
+    public NavMeshAgent NavMeshAgent { get => navMeshAgent; }
+    public bool Pathfind { get => pathfind; set => pathfind = value; }
 
     private void Start() {
         UpdatePlayerTransform();
