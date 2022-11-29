@@ -15,8 +15,8 @@ public class RangedEnemy : MonoBehaviour {
         RotateTowardsPlayer();
         
         RaycastHit hit;
-        Debug.DrawRay(rangedWeapon.shootPosition.position, rangedWeapon.shootPosition.forward, Color.red, 5f);
-        if (Physics.Raycast(rangedWeapon.shootPosition.position, transform.forward, out hit, rangedWeapon.shotRange)) {
+        Debug.DrawRay(rangedWeapon.shootPosition.position, rangedWeapon.shootPosition.forward * 5, Color.red);
+        if (Physics.Raycast(rangedWeapon.shootPosition.position, rangedWeapon.shootPosition.forward, out hit, 100)) {
             if (Vector3.Distance(transform.position, enemyPathfinding.playerTransform.position) <= attackDistance)
                 rangedWeapon.Shoot();
         }
