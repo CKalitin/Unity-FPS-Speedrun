@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerMovementController : MonoBehaviour {
     #region Variables
 
     [Header("General")]
     [SerializeField] private bool lockRot = false;
     [Tooltip("This doesn't allow input from the mouse on the first frame. Otherwise mouse would snap to center, rotating the player, which is a bug.")]
     [SerializeField] private bool lockOnFirstUpdate = true;
-    private bool firstUpdatePassed = false;
     int updates = 0;
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float sprintMoveSpeed;
     [Tooltip("This is to fix acceleration when in air.")]
     [SerializeField] private float maxMovementSpeed;
     [Space]
@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private float jumpCooldown;
     [SerializeField] private float airMovementSpeedMultiplier;
 
+    bool sprinting;
     bool readyToJump;
     Vector2 movementInput;
     Vector3 moveDirection;
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private Transform[] yAxisRotation;
     [Tooltip("Objects in this array will be only rotated on both axis")]
     [SerializeField] private Transform[] fullAxisRotation;
+    [SerializeField] private Transform[] followCameraReference;
     Vector2 cameraRot;
 
     [Header("Other")]
@@ -69,14 +71,10 @@ public class PlayerController : MonoBehaviour {
         SpeedControl();
 
         RotatePlayer();
-        
-        if (!firstUpdatePassed & lockOnFirstUpdate) {
-            if (updates > 3) {
-                firstUpdatePassed = true;
-                
-                lockRot = false;
-            }
-            updates++;
+
+        updates++;
+        if (lockOnFirstUpdate & updates >= 5 & updates < 6) {
+            lockRot = false;
         }
     }
 
@@ -92,6 +90,7 @@ public class PlayerController : MonoBehaviour {
         else rb.drag = rb.drag = airDrag;
 
         movementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        sprinting = Input.GetKey(KeyCode.LeftShift);
 
         if (Input.GetKey(KeyCode.Space) && readyToJump && grounded) {
             Jump();
@@ -104,9 +103,14 @@ public class PlayerController : MonoBehaviour {
 
     private void MovePlayer() {
         moveDirection = yAxisRotation[0].forward * movementInput.y + yAxisRotation[0].right * movementInput.x; // Get Movement Direction
-        
+
+        // Change speed if sprinting
+        Vector3 force = moveDirection.normalized * moveSpeed * 10f;
+        if (sprinting)
+            force = moveDirection.normalized * sprintMoveSpeed * 10f;
+
         if (grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            rb.AddForce(force, ForceMode.Force);
         
         else if (!grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMovementSpeedMultiplier, ForceMode.Force);
