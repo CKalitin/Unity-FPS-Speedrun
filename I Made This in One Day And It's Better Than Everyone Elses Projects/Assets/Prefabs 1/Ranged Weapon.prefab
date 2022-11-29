@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2533035193639774505}
   - component: {fileID: 2533035193639774506}
+  - component: {fileID: 2533035193639774507}
   - component: {fileID: 2533035193639774508}
   m_Layer: 0
   m_Name: Ranged Weapon
@@ -50,7 +51,21 @@ MonoBehaviour:
   shotDamage: 2
   shotRange: 100
   shootPosition: {fileID: 6316068176749703681}
+  shootKeycode: 323
   animator: {fileID: 2533035193639774508}
+--- !u!114 &2533035193639774507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2533035193639774504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d52d76b4e658a4fbb1b746e89497ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCameraPosition: {fileID: 0}
 --- !u!95 &2533035193639774508
 Animator:
   serializedVersion: 4
