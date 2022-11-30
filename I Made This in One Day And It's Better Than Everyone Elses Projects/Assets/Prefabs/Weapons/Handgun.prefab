@@ -106,6 +106,12 @@ MonoBehaviour:
   shootPosition: {fileID: 6316068176749703681}
   ammoType: 0
   ammoAmount: 1000
+  shotSoundEffect:
+    audioClip: {fileID: 8300000, guid: 0aad8adc43f1c434697d110cc9eb2b99, type: 3}
+    pitchMin: 0.7
+    pitchMax: 0.7
+    volumeMin: 0.45
+    volumeMax: 0.45
   damager: {fileID: -6769479777937699097}
   animator: {fileID: 2533035193639774508}
 --- !u!114 &-6769479777937699097

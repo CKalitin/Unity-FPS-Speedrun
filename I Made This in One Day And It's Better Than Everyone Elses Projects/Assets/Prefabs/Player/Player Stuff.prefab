@@ -169,6 +169,8 @@ MonoBehaviour:
   fullAxisRotation:
   - {fileID: 7600035444741586010}
   followCameraReference: []
+  walkingSpeedAudioTrigger: 1
+  runningSpeedAudioTrigger: 4.5
   rb: {fileID: 3772048626702641297}
 --- !u!114 &6067221381734524105
 MonoBehaviour:
@@ -274,7 +276,7 @@ MonoBehaviour:
     available: 0
   - weapon: {fileID: 2210343247637148259}
     weaponTag: SemiAuto
-    available: 0
+    available: 1
 --- !u!114 &1421636008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,7 +695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2533035193639774504, guid: 26bbda430a25eec478bc637a2ffe363b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2533035193639774505, guid: 26bbda430a25eec478bc637a2ffe363b, type: 3}
       propertyPath: m_RootOrder

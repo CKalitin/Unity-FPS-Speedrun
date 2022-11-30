@@ -73,6 +73,12 @@ MonoBehaviour:
   attackRange: 2
   dealDamageDelay: 0.28
   attackPosition: {fileID: 5798688977095364995}
+  attackSoundEffect:
+    audioClip: {fileID: 8300000, guid: 284b42ba1ab4f5c49a12ef99c5a771d9, type: 3}
+    pitchMin: 0.95
+    pitchMax: 1.05
+    volumeMin: 0.45
+    volumeMax: 0.45
   damager: {fileID: 8549607390731455789}
   animator: {fileID: 5798688976128762513}
 --- !u!114 &8549607390731455789

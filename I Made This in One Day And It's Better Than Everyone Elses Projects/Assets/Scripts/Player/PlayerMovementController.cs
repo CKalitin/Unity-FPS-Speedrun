@@ -46,6 +46,12 @@ public class PlayerMovementController : MonoBehaviour {
     [SerializeField] private Transform[] fullAxisRotation;
     [SerializeField] private Transform[] followCameraReference;
     Vector2 cameraRot;
+    
+    [Header("Audio")]
+    [Tooltip("At what speed the player is considered walking.")]
+    [SerializeField] private float walkingSpeedAudioTrigger;
+    [Tooltip("At what speed the player is considered running.")]
+    [SerializeField] private float runningSpeedAudioTrigger;
 
     [Header("Other")]
     [SerializeField] private Rigidbody rb;
@@ -69,19 +75,21 @@ public class PlayerMovementController : MonoBehaviour {
     private void Update() {
         PlayerMovementInputs();
         SpeedControl();
-
         RotatePlayer();
 
-        updates++;
-        if (lockOnFirstUpdate & updates >= 5 & updates < 6) {
-            lockRot = false;
-        }
+        Audio();
+
+        ManageLockRot();
     }
 
     private void FixedUpdate() {
         MovePlayer();
     }
-    
+
+    #endregion
+
+    #region Movement
+
     private void PlayerMovementInputs() {
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.1f, groundLayerMask); // Ground Check
 
@@ -96,10 +104,6 @@ public class PlayerMovementController : MonoBehaviour {
             Jump();
         }
     }
-
-    #endregion
-
-    #region Movement
 
     private void MovePlayer() {
         moveDirection = yAxisRotation[0].forward * movementInput.y + yAxisRotation[0].right * movementInput.x; // Get Movement Direction
@@ -162,6 +166,30 @@ public class PlayerMovementController : MonoBehaviour {
             for (int i = 0; i < fullAxisRotation.Length; i++) {
                 fullAxisRotation[i].rotation = Quaternion.Euler(cameraRot.x, cameraRot.y, 0f);
             }
+        }
+    }
+
+    #endregion
+
+    #region Other
+
+    private void ManageLockRot() {
+        updates++;
+        if (lockOnFirstUpdate & updates >= 5 & updates < 6) {
+            lockRot = false;
+        }
+    }
+
+    private void Audio() {
+        if (rb.velocity.magnitude >= runningSpeedAudioTrigger && Mathf.Abs(rb.velocity.y) < 0.2f) {
+            AudioController.instance.ToggleRunningAudio(true);
+            AudioController.instance.ToggleWalkingAudio(false);
+        } else if (rb.velocity.magnitude >= walkingSpeedAudioTrigger && Mathf.Abs(rb.velocity.y) < 0.2f) {
+            AudioController.instance.ToggleRunningAudio(false);
+            AudioController.instance.ToggleWalkingAudio(true);
+        } else {
+            AudioController.instance.ToggleRunningAudio(false);
+            AudioController.instance.ToggleWalkingAudio(false);
         }
     }
 

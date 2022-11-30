@@ -11,6 +11,9 @@ public class WeaponMelee : MonoBehaviour {
     [Tooltip("Get all health components in sphere of radius attack range from this point.")]
     [SerializeField] private Transform attackPosition;
 
+    [Header("Audio")]
+    [SerializeField] private SoundEffect attackSoundEffect;
+
     [Header("Other")]
     [SerializeField] private Damager damager;
     [Tooltip("Uses 'Attack' trigger")]
@@ -24,6 +27,8 @@ public class WeaponMelee : MonoBehaviour {
             
             if (animator) animator.SetTrigger("Attack");
             
+            AudioController.instance.PlayerSoundEffect(attackSoundEffect, attackPosition.position);
+
             Invoke(nameof(DealDamage), dealDamageDelay);
             Invoke(nameof(ResetCanShoot), rateOfAttack);
         }

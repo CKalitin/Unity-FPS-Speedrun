@@ -19,6 +19,9 @@ public class WeaponRanged : MonoBehaviour {
     [SerializeField] private RangedWeaponAmmoTypes ammoType;
     [SerializeField] private int ammoAmount = 1000;
 
+    [Header("Audio")]
+    [SerializeField] private SoundEffect shotSoundEffect;
+
     [Header("Other")]
     [SerializeField] private Damager damager;
     [Tooltip("Uses 'Attack' trigger in Animation Controller")]
@@ -39,7 +42,9 @@ public class WeaponRanged : MonoBehaviour {
             }
 
             if (animator) animator.SetTrigger("Attack");
-
+            
+            AudioController.instance.PlayerSoundEffect(shotSoundEffect, shootPosition.position);
+            
             coolingDownShot = true;
             Invoke(nameof(ResetShotCooldown), rateOfFire);
         }
