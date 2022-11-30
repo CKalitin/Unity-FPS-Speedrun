@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum RangedWeaponAmmoTypes {
-    NineMM,
+    Handgun,
     SemiAuto
 }
 
@@ -47,5 +47,9 @@ public class WeaponRanged : MonoBehaviour {
 
     private void ResetShotCooldown() {
         coolingDownShot = false;
+    }
+
+    public void ToggleFocus(bool _focusState) {
+        animator.SetBool("Focus", _focusState);
     }
 }

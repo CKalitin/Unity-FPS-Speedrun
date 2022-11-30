@@ -118,7 +118,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8304701929348031364}
-  - {fileID: 1452263301322789577}
+  - {fileID: 229148839182424968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -174,7 +174,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   navMeshAgent: {fileID: 8304701930286078107}
-  pathfind: 1
 --- !u!65 &3205452042387112669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -202,7 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDistance: 1.5
   enemyPathfinding: {fileID: 8304701930286078104}
-  meleeWeapon: {fileID: 1452263301322789575}
+  meleeWeapon: {fileID: 229148839182424966}
 --- !u!114 &1080379911595426134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,28 +217,16 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   destroyOnZeroHealth: 1
---- !u!1001 &4926495033484292183
+--- !u!1001 &6005283201231730966
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 8304701930286078106}
     m_Modifications:
-    - target: {fileID: 5798688976128762512, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
-      propertyPath: damager
-      value: 
-      objectReference: {fileID: 3672724796666609018}
-    - target: {fileID: 5798688976128762512, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
-      propertyPath: selfHealth
-      value: 
-      objectReference: {fileID: 1080379911595426134}
     - target: {fileID: 5798688976128762525, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
       propertyPath: m_Name
-      value: Melee Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 5798688976128762525, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
+      value: Sword
       objectReference: {fileID: 0}
     - target: {fileID: 5798688976128762526, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
       propertyPath: m_RootOrder
@@ -285,25 +272,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8549607390731455789, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
-      propertyPath: targetTags.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8549607390731455789, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
-      propertyPath: targetTags.Array.data[0]
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 8549607390731455789, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
-      propertyPath: targetTags.Array.data[1]
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5798688976128762527, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
---- !u!114 &1452263301322789575 stripped
+--- !u!114 &229148839182424966 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5798688976128762512, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
-  m_PrefabInstance: {fileID: 4926495033484292183}
+  m_PrefabInstance: {fileID: 6005283201231730966}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -311,19 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ff2dae6d91c34489dd494a950581b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1452263301322789577 stripped
+--- !u!4 &229148839182424968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5798688976128762526, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
-  m_PrefabInstance: {fileID: 4926495033484292183}
+  m_PrefabInstance: {fileID: 6005283201231730966}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3672724796666609018 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8549607390731455789, guid: ed1b14cc394716b4a918c9add04482d5, type: 3}
-  m_PrefabInstance: {fileID: 4926495033484292183}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a593ea89f86afdb4abb5752e82cf68fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

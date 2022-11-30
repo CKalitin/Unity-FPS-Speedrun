@@ -39,6 +39,14 @@ public class PlayerWeaponController : MonoBehaviour {
             else if (weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>())
                 weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>().Shoot();
         }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1) && weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>() && weapons[currentWeaponIndex].available) {
+            weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>().ToggleFocus(true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse1) && weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>() && weapons[currentWeaponIndex].available) {
+            weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>().ToggleFocus(false);
+        }
     }
 
     #endregion
@@ -61,6 +69,8 @@ public class PlayerWeaponController : MonoBehaviour {
 
     // Holy shit Github Copilot wrote most of this
     private void ChangeWeapon(int _input) {
+        if (weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>() && weapons[currentWeaponIndex].available)
+            weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>().ToggleFocus(false);
         weapons[currentWeaponIndex].weapon.SetActive(false);
 
         bool newWeaponSelected = false;
@@ -79,7 +89,6 @@ public class PlayerWeaponController : MonoBehaviour {
 
             iters++;
             if (iters > weapons.Length) {
-                Debug.LogError("No weapons available");
                 break;
             }
         }
@@ -87,6 +96,8 @@ public class PlayerWeaponController : MonoBehaviour {
 
     public void SetWeapon(int _weaponIndex) {
         if (weapons[_weaponIndex].available) {
+            if (weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>() && weapons[currentWeaponIndex].available)
+                weapons[currentWeaponIndex].weapon.GetComponent<WeaponRanged>().ToggleFocus(false);
             weapons[currentWeaponIndex].weapon.SetActive(false);
             currentWeaponIndex = _weaponIndex;
             weapons[currentWeaponIndex].weapon.SetActive(true);

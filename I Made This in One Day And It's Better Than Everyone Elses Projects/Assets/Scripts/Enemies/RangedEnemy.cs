@@ -33,8 +33,6 @@ public class RangedEnemy : MonoBehaviour {
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         
         Quaternion weaponTargetRotation = Quaternion.LookRotation(targetDirection);
-        weaponTargetRotation.x = 0;
-        weaponTargetRotation.z = 0;
         rangedWeapon.transform.rotation = Quaternion.RotateTowards(rangedWeapon.transform.rotation, weaponTargetRotation, rotationSpeed * Time.deltaTime);
 
     }

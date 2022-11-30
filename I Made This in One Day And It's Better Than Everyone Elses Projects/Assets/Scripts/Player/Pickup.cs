@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum PickupTypes {
     Health,
-    NineMMAmmo,
+    HandgunAmmo,
     SemiAutoAmmo,
     Weapon
 }
@@ -22,7 +22,7 @@ public class Pickup : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             switch (pickupType) {
-                case PickupTypes.NineMMAmmo:
+                case PickupTypes.HandgunAmmo:
                 AmmoPickup();
                 break;
                 case PickupTypes.SemiAutoAmmo:
