@@ -45,9 +45,10 @@ public class Pickup : MonoBehaviour {
         if (!wp) return; // If current weapon is ranged weapon
         if (!pwc.Weapons[pwc.CurrentWeaponIndex].available) return; // If current weapon is available
         if (wp.AmmoType != ammoType) return; // If current weapon takes proper ammo type
+        if (wp.AmmoAmount >= wp.MaxAmmo) return; // If current weapon is full
 
-        wp.AmmoAmount += amount;
-
+        wp.AmmoAmount = Mathf.Clamp(wp.AmmoAmount + amount, 0, wp.MaxAmmo);
+        
         Destroy(gameObject);
     }
 

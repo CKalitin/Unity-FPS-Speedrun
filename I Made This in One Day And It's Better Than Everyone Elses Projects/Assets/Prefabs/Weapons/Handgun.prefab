@@ -105,7 +105,9 @@ MonoBehaviour:
   shotRange: 100
   shootPosition: {fileID: 6316068176749703681}
   ammoType: 0
-  ammoAmount: 1000
+  ammoAmount: 48
+  maxAmmo: 48
+  useAmmo: 0
   shotSoundEffect:
     audioClip: {fileID: 8300000, guid: 0aad8adc43f1c434697d110cc9eb2b99, type: 3}
     pitchMin: 0.7

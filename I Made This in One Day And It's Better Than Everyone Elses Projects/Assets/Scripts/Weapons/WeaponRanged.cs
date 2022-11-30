@@ -17,7 +17,9 @@ public class WeaponRanged : MonoBehaviour {
     [Header("Ammo")]
     [Tooltip("This is used by the Player Pickup Collector")]
     [SerializeField] private RangedWeaponAmmoTypes ammoType;
-    [SerializeField] private int ammoAmount = 1000;
+    [SerializeField] private int ammoAmount = 100;
+    [SerializeField] private int maxAmmo = 100;
+    [SerializeField] private bool useAmmo = false;
 
     [Header("Audio")]
     [SerializeField] private SoundEffect shotSoundEffect;
@@ -33,21 +35,25 @@ public class WeaponRanged : MonoBehaviour {
     public Transform ShootPosition { get => shootPosition; set => shootPosition = value; }
     public RangedWeaponAmmoTypes AmmoType { get => ammoType; set => ammoType = value; }
     public int AmmoAmount { get => ammoAmount; set => ammoAmount = value; }
+    public int MaxAmmo { get => maxAmmo; set => maxAmmo = value; }
 
     public void Shoot() {
-        if (!coolingDownShot) {
-            RaycastHit hit;
-            if (Physics.Raycast(shootPosition.position, shootPosition.forward, out hit, shotRange)) {
-                damager.DealDamage(new Collider[1] { hit.collider }, -Mathf.Abs(shotDamage));
-            }
+        if (coolingDownShot) return;
+        if (useAmmo && ammoAmount <= 0) return;
 
-            if (animator) animator.SetTrigger("Attack");
-            
-            AudioController.instance.PlayerSoundEffect(shotSoundEffect, shootPosition.position);
-            
-            coolingDownShot = true;
-            Invoke(nameof(ResetShotCooldown), rateOfFire);
+        RaycastHit hit;
+        if (Physics.Raycast(shootPosition.position, shootPosition.forward, out hit, shotRange)) {
+            damager.DealDamage(new Collider[1] { hit.collider }, -Mathf.Abs(shotDamage));
         }
+        
+        ammoAmount -= 1;
+        
+        if (animator) animator.SetTrigger("Attack");
+        
+        AudioController.instance.PlayerSoundEffect(shotSoundEffect, shootPosition.position);
+        
+        coolingDownShot = true;
+        Invoke(nameof(ResetShotCooldown), rateOfFire);
     }
 
     private void ResetShotCooldown() {
