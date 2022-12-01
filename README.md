@@ -2,10 +2,10 @@
 I Made This in One Day And Its Better Than Everyone Elses Projects
 
 Hopefully under 24 hours total
-Total: 15.5h... 8.5 remain
+Total: 28.5h
 Nov 28: 5.5h
 Nov 29: 10h
-Nov 30: (Before midnight) 7h
+Nov 30: 13h
 
 Tomorrows Plans:
 Enemy Model and Anim, 2h

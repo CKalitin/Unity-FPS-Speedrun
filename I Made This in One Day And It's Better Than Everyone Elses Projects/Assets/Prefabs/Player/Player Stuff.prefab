@@ -137,7 +137,7 @@ MonoBehaviour:
   followCameraReference: []
   walkingSpeedAudioTrigger: 1
   runningSpeedAudioTrigger: 4.5
-  playerMesh: {fileID: 3551924752360767492}
+  playerMesh: {fileID: 3495190374708689605}
   rb: {fileID: 3772048626702641297}
 --- !u!114 &6067221381734524105
 MonoBehaviour:
@@ -329,10 +329,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4434798167756757437}
     m_Modifications:
-    - target: {fileID: -4241054747628637953, guid: 10067279a310de544a46bca410ad17de, type: 3}
-      propertyPath: playerMesh
-      value: 
-      objectReference: {fileID: 3495190374708689605}
     - target: {fileID: 4597558347998425339, guid: 10067279a310de544a46bca410ad17de, type: 3}
       propertyPath: m_Name
       value: Player Camera
@@ -343,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4597558347998425342, guid: 10067279a310de544a46bca410ad17de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 11.58
       objectReference: {fileID: 0}
     - target: {fileID: 4597558347998425342, guid: 10067279a310de544a46bca410ad17de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -351,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4597558347998425342, guid: 10067279a310de544a46bca410ad17de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 4597558347998425342, guid: 10067279a310de544a46bca410ad17de, type: 3}
       propertyPath: m_LocalRotation.w
@@ -385,10 +381,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 7600035444741586010}
-    - target: {fileID: 6417877941542521413, guid: 10067279a310de544a46bca410ad17de, type: 3}
-      propertyPath: m_Depth
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10067279a310de544a46bca410ad17de, type: 3}
 --- !u!4 &4434798167465572875 stripped
@@ -862,11 +854,6 @@ PrefabInstance:
 --- !u!1 &3495190374708689605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8283535546214742128, guid: 6429b1f01887bc6488e8a383a0483447, type: 3}
-  m_PrefabInstance: {fileID: 4434798166846258517}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3551924752360767492 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6429b1f01887bc6488e8a383a0483447, type: 3}
   m_PrefabInstance: {fileID: 4434798166846258517}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4179665990571907774 stripped

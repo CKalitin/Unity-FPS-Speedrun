@@ -193,10 +193,11 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     public void TogglePlayerBodyVisible(bool _toggle) {
-        if (_toggle)
+        if (_toggle) {
             playerMesh.layer = 0;
-        else
+        } else {
             playerMesh.layer = 6;
+        }
     }
 
     #endregion
