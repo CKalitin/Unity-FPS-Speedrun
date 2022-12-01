@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawner : MonoBehaviour {
-    [SerializeField] private Component comp;
+public class ScoreController : MonoBehaviour
+{
     // Start is called before the first frame update
     void Start()
     {

@@ -7,8 +7,6 @@ public class PlayerCameraController : MonoBehaviour {
     [SerializeField] private Transform mainMenuCameraPosition;
     [Space]
     [SerializeField] private float lerpTimeInSeconds = 0.1f;
-    [Space]
-    [SerializeField] private GameObject playerMesh;
 
     bool lerp = false;
     float lerpStep = 0f;
@@ -38,14 +36,7 @@ public class PlayerCameraController : MonoBehaviour {
                 
                 lerp = false;
                 
-                playerMesh.layer = 6; // 'Dont Render' Layer
-                
-                GameController.instance.ToggleCursor(false);
-                GameController.instance.GameActive = true;
-
-                FindObjectOfType<MainMenuController>().ActiveGameUI();
-
-                Time.timeScale = 1f;
+                GameController.instance.ActivateGame();
             }
         }
     }

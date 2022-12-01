@@ -5,15 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class EndlessGameController : MonoBehaviour {
     [Header("Game")]
+    [SerializeField] private EnemySpawner enemySpawner;
+    [SerializeField] private PickupSpawner pickupSpawner;
     private Health playerHealth;
 
-    private void Start() {
-        UpdatePlayerHealth();
+    private void Awake() {
+        Time.timeScale = 0f;
     }
 
-    private void UpdatePlayerHealth() { playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>(); }
+    private void Start() {
+        GetPlayerHealth();
+    }
 
     private void Update() {
         if (playerHealth.CurrentHealth <= 0) { SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); }
+    }
+
+    private void GetPlayerHealth() { playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>(); }
+    
+    public void StartGame() {
+        FindObjectOfType<MainMenuController>().ActiveGameUI();
+        Time.timeScale = 1f;
+    }
+    
+    public void StartSpawning() {
+        pickupSpawner.TogglePickupSpawning(true);
+        enemySpawner.SpawnFirstWave();
     }
 }

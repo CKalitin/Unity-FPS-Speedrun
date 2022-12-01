@@ -48,8 +48,8 @@ public class Pickup : MonoBehaviour {
         if (wp.AmmoAmount >= wp.MaxAmmo) return; // If current weapon is full
 
         wp.AmmoAmount = Mathf.Clamp(wp.AmmoAmount + amount, 0, wp.MaxAmmo);
-        
-        Destroy(gameObject);
+
+        gameObject.SetActive(false);
     }
 
     private void HealthPickup() {
@@ -57,7 +57,7 @@ public class Pickup : MonoBehaviour {
 
         if (ph.CurrentHealth < ph.MaxHealth) {
             ph.ChangeHealth(Mathf.Abs(amount));
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
@@ -68,7 +68,7 @@ public class Pickup : MonoBehaviour {
             if (pwc.Weapons[i].weaponTag == weaponTag && !pwc.Weapons[i].available) {
                 pwc.Weapons[i].available = true;
                 pwc.SetWeapon(i);
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

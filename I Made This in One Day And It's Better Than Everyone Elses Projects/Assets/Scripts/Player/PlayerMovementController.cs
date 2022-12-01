@@ -54,6 +54,7 @@ public class PlayerMovementController : MonoBehaviour {
     [SerializeField] private float runningSpeedAudioTrigger;
 
     [Header("Other")]
+    [SerializeField] private GameObject playerMesh;
     [SerializeField] private Rigidbody rb;
 
     #endregion
@@ -189,6 +190,13 @@ public class PlayerMovementController : MonoBehaviour {
             AudioController.instance.ToggleRunningAudio(false);
             AudioController.instance.ToggleWalkingAudio(false);
         }
+    }
+
+    public void TogglePlayerBodyVisible(bool _toggle) {
+        if (_toggle)
+            playerMesh.layer = 0;
+        else
+            playerMesh.layer = 6;
     }
 
     #endregion

@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupType: 1
-  amount: 36
+  amount: 24
   ammoType: 0
   weaponTag: 
 --- !u!1001 &1202892866093045692

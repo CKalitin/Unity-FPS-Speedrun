@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
     public static GameController instance;
-
+    
     private bool gameActive = false;
 
     public bool GameActive { get => gameActive; set => gameActive = value; }
@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
             DontDestroyOnLoad(this);
         } else {
             Destroy(gameObject);
+            return;
         }
     }
 
@@ -24,5 +25,15 @@ public class GameController : MonoBehaviour {
             Cursor.lockState = CursorLockMode.None;
         else
             Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void ActivateGame() {
+        gameActive = true;
+        
+        ToggleCursor(false);
+        FindObjectOfType<PlayerMovementController>().TogglePlayerBodyVisible(false);
+
+        if (FindObjectOfType<EndlessGameController>())
+            FindObjectOfType<EndlessGameController>().StartGame();
     }
 }

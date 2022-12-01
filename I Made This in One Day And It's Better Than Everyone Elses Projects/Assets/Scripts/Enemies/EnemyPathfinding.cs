@@ -21,7 +21,9 @@ public class EnemyPathfinding : MonoBehaviour {
     private void UpdatePlayerTransform() { playerTransform = GameObject.FindGameObjectWithTag("Player").transform; }
 
     private void Update() {
-        navMeshAgent.isStopped = !pathfind;
-        navMeshAgent.SetDestination(playerTransform.position);
+        if (navMeshAgent.isOnNavMesh) {
+            navMeshAgent.isStopped = !pathfind;
+            navMeshAgent.SetDestination(playerTransform.position);
+        }
     }
 }

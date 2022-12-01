@@ -22,7 +22,6 @@ public class RangedEnemy : MonoBehaviour {
         RaycastHit hit;
         if (Vector3.Distance(transform.position, enemyPathfinding.PlayerTransform.position) <= attackDistance) {
             aiming = true;
-            Debug.DrawRay(rangedWeapon.ShootPosition.position, rangedWeapon.ShootPosition.forward * 8);
             if (Physics.Raycast(rangedWeapon.ShootPosition.position, rangedWeapon.ShootPosition.forward, out hit, rangedWeapon.ShotRange) && hit.transform.GetComponent<PlayerMovementController>() && animator.GetBool("running") == false) {
                 rangedWeapon.Shoot();
             }

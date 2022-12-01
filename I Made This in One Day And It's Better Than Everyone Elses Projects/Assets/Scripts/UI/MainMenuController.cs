@@ -11,7 +11,6 @@ public class MainMenuController : MonoBehaviour {
     private void Awake() {
         pcc = FindObjectOfType<PlayerCameraController>();
         
-        Time.timeScale = 0f;
         gameUIParent.SetActive(false);
         menuUIParent.SetActive(true);
     }
