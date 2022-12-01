@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -71.24, y: -85.154, z: 164.823}
+        value: {x: -60.533, y: -90.958, z: 170.145}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -44,7 +44,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 75.878, y: -45.092, z: 37.744}
+        value: {x: 38.758, y: -75.023, z: 11.042}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -271,7 +271,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 50.913, y: 9.117, z: 11.102}
+        value: {x: 74.627, y: 154.041, z: 152.744}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -297,7 +297,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -40.664, y: -14.426, z: 10.714}
+        value: {x: -51.428, y: -23.364, z: 23.321}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -621,7 +621,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -71.24
+        value: -60.533
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -649,7 +649,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -85.154
+        value: -90.958
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -677,7 +677,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 164.823
+        value: 170.145
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -789,7 +789,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 75.878
+        value: 38.758
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -817,7 +817,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -45.092
+        value: -75.023
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -845,7 +845,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 37.744
+        value: 11.042
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1551,7 +1551,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 50.913
+        value: 74.627
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1580,7 +1580,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 9.117
+        value: 154.041
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1609,7 +1609,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 11.102
+        value: 152.744
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1638,7 +1638,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -40.664
+        value: -51.428
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1667,7 +1667,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -14.426
+        value: -23.364
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1696,7 +1696,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 10.714
+        value: 23.321
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1935,8 +1935,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper/Left Arm
-      Lower
+    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1946,8 +1945,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper/Left Arm
-      Lower
+    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1957,8 +1955,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper/Left Arm
-      Lower
+    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1968,8 +1965,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper/Right Arm
-      Lower
+    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1979,8 +1975,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper/Right Arm
-      Lower
+    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1990,8 +1985,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper/Right Arm
-      Lower
+    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2094,7 +2088,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
+    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper/Right Arm
+      Lower
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2104,7 +2099,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
+    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper/Right Arm
+      Lower
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2114,7 +2110,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
+    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper/Right Arm
+      Lower
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2124,7 +2121,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper
+    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper/Left Arm
+      Lower
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2134,7 +2132,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper
+    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper/Left Arm
+      Lower
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2144,7 +2143,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Humanoid/Humanoid Armature/Chest/Right Shoulder/Right Arm Upper
+    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper/Left Arm
+      Lower
     classID: 4
     script: {fileID: 0}
   - curve:

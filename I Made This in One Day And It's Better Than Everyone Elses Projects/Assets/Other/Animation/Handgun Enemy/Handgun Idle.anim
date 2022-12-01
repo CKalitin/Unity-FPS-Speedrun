@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: Handgun Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,7 +19,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -86.766, y: -41.373, z: 41.672}
+        value: {x: -84.994, y: -24.85, z: 25.109}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -387,7 +387,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -86.766
+        value: -84.994
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -406,7 +406,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -41.373
+        value: -24.85
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -425,7 +425,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 41.672
+        value: 25.109
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1053,8 +1053,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Humanoid/Humanoid Armature/Hips/Right Hip/Right Leg Upper/Right Leg Lower/Right
-      Foot
+    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1064,8 +1063,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Humanoid/Humanoid Armature/Hips/Right Hip/Right Leg Upper/Right Leg Lower/Right
-      Foot
+    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1075,8 +1073,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Humanoid/Humanoid Armature/Hips/Right Hip/Right Leg Upper/Right Leg Lower/Right
-      Foot
+    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1299,7 +1296,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
+    path: Humanoid/Humanoid Armature/Hips/Right Hip/Right Leg Upper/Right Leg Lower/Right
+      Foot
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1309,7 +1307,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
+    path: Humanoid/Humanoid Armature/Hips/Right Hip/Right Leg Upper/Right Leg Lower/Right
+      Foot
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1319,7 +1318,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Humanoid/Humanoid Armature/Chest/Left Shoulder/Left Arm Upper
+    path: Humanoid/Humanoid Armature/Hips/Right Hip/Right Leg Upper/Right Leg Lower/Right
+      Foot
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
