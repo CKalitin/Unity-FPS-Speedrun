@@ -70,8 +70,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rateOfAttack: 0.65
   attackDamage: 7
-  attackRange: 2
-  dealDamageDelay: 0.28
+  attackRange: 1.5
+  dealDamageDelay: 0.05
   attackPosition: {fileID: 5798688977095364995}
   attackSoundEffect:
     audioClip: {fileID: 8300000, guid: 284b42ba1ab4f5c49a12ef99c5a771d9, type: 3}

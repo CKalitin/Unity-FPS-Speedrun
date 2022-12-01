@@ -21,8 +21,16 @@ public class WeaponRanged : MonoBehaviour {
     [SerializeField] private int maxAmmo = 100;
     [SerializeField] private bool useAmmo = false;
 
-    [Header("Audio")]
+    [Header("Polish")]
     [SerializeField] private SoundEffect shotSoundEffect;
+    [Space]
+    [SerializeField] private GameObject shotVFX;
+    [SerializeField] private bool useShotVFX = true;
+    [Space]
+    [Tooltip("This is instantiated at the location where the raycast hit.")]
+    [SerializeField] private GameObject hitObject;
+    [SerializeField] private bool useHitObject = false;
+    private static float hitObjectDestroyDelay = 0.2f;
 
     [Header("Other")]
     [SerializeField] private Damager damager;
@@ -44,12 +52,16 @@ public class WeaponRanged : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(shootPosition.position, shootPosition.forward, out hit, shotRange)) {
             damager.DealDamage(new Collider[1] { hit.collider }, -Mathf.Abs(shotDamage));
+            if (useHitObject) {
+                GameObject newHitObject = Instantiate(hitObject, hit.point, Quaternion.LookRotation(transform.position - hit.point));
+                Destroy(newHitObject, hitObjectDestroyDelay);
+            }
         }
         
         ammoAmount -= 1;
-        
+
         if (animator) animator.SetTrigger("Attack");
-        
+        if (useShotVFX) Instantiate(shotVFX, shootPosition.position, ShootPosition.rotation);
         AudioController.instance.PlayerSoundEffect(shotSoundEffect, shootPosition.position);
         
         coolingDownShot = true;

@@ -18,7 +18,7 @@ public class WeaponMelee : MonoBehaviour {
     [SerializeField] private Damager damager;
     [Tooltip("Uses 'Attack' trigger")]
     [SerializeField] private Animator animator;
-    [SerializeField] private bool useAnimations;
+    [SerializeField] private bool useAnimations = false;
     
     bool coolingDownAttack = false;
     

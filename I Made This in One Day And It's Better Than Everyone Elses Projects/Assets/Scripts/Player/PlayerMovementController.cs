@@ -61,9 +61,6 @@ public class PlayerMovementController : MonoBehaviour {
     #region Core
 
     private void Start() {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
         rb.freezeRotation = true;
         readyToJump = true;
 
@@ -73,13 +70,14 @@ public class PlayerMovementController : MonoBehaviour {
     }
 
     private void Update() {
-        PlayerMovementInputs();
-        SpeedControl();
-        RotatePlayer();
-
+        if (GameController.instance.GameActive) {
+            PlayerMovementInputs();
+            SpeedControl();
+            RotatePlayer();
+            ManageLockRot();
+        }
+        
         Audio();
-
-        ManageLockRot();
     }
 
     private void FixedUpdate() {

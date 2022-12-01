@@ -26,8 +26,10 @@ public class PlayerWeaponController : MonoBehaviour {
     }
 
     private void Update() {
-        ControlWeaponChanging();
-        Attack();
+        if (GameController.instance.GameActive) {
+            ControlWeaponChanging();
+            Attack();
+        }
     }
 
     #region Using Weapons

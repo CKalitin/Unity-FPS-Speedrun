@@ -5,6 +5,7 @@ Hopefully under 24 hours total
 Total: 15.5h... 8.5 remain
 Nov 28: 5.5h
 Nov 29: 10h
+Nov 30: (Before midnight) 7h
 
 Tomorrows Plans:
 Enemy Model and Anim, 2h

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FollowObject : MonoBehaviour {
-    [SerializeField] private Transform targetCameraPosition;
+    [SerializeField] private Transform target;
+
+    public Transform Target { get => target; set => target = value; }
 
     private void Update() {
-        transform.rotation = targetCameraPosition.rotation;
-        transform.position = targetCameraPosition.position;
+        transform.rotation = target.rotation;
+        transform.position = target.position;
     }
 }
