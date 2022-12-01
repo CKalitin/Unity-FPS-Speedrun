@@ -128,7 +128,7 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 1
-  sensitivity: {x: 400, y: 400}
+  sensitivity: {x: 350, y: 350}
   yAxisRotation:
   - {fileID: 786869896389979448}
   - {fileID: 6927695181580132421}
@@ -339,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4597558347998425342, guid: 10067279a310de544a46bca410ad17de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.58
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4597558347998425342, guid: 10067279a310de544a46bca410ad17de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4597558347998425342, guid: 10067279a310de544a46bca410ad17de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4597558347998425342, guid: 10067279a310de544a46bca410ad17de, type: 3}
       propertyPath: m_LocalRotation.w

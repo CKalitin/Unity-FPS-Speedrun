@@ -68,6 +68,10 @@ public class PlayerMovementController : MonoBehaviour {
         if (lockOnFirstUpdate) {
             lockRot = true;
         }
+
+        Vector2 newSensitivity = new Vector2(sensitivity.x * ((1f / Screen.height) * 1000), sensitivity.y * ((1f / Screen.height) * 1000));
+        Debug.Log(Screen.height);
+        sensitivity = newSensitivity;
     }
 
     private void Update() {
