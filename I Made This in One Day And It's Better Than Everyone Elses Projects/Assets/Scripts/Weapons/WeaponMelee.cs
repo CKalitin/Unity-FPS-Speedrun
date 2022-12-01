@@ -18,6 +18,7 @@ public class WeaponMelee : MonoBehaviour {
     [SerializeField] private Damager damager;
     [Tooltip("Uses 'Attack' trigger")]
     [SerializeField] private Animator animator;
+    [SerializeField] private bool useAnimations;
     
     bool coolingDownAttack = false;
     
@@ -25,7 +26,7 @@ public class WeaponMelee : MonoBehaviour {
         if (!coolingDownAttack) {
             coolingDownAttack = true;
             
-            if (animator) animator.SetTrigger("Attack");
+            if (animator && useAnimations) animator.SetTrigger("Attack");
             
             AudioController.instance.PlayerSoundEffect(attackSoundEffect, attackPosition.position);
 

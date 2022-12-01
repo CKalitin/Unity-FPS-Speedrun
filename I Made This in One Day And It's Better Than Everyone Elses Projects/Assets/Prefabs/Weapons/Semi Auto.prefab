@@ -72,8 +72,8 @@ MonoBehaviour:
   shotRange: 100
   shootPosition: {fileID: 5807829869394391589}
   ammoType: 1
-  ammoAmount: 150
-  maxAmmo: 150
+  ammoAmount: 100
+  maxAmmo: 100
   useAmmo: 0
   shotSoundEffect:
     audioClip: {fileID: 8300000, guid: 586b8a6cab83ec342a79e3ecd81fe078, type: 3}

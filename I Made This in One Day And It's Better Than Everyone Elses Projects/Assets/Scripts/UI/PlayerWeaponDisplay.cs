@@ -27,7 +27,7 @@ public class PlayerWeaponDisplay : MonoBehaviour {
 
     private void SetWeaponDisplays() {
         for (int i = 0; i < pwc.Weapons.Length; i++) {
-            if (i == pwc.CurrentWeaponIndex) {
+            if (i == pwc.CurrentWeaponIndex && pwc.Weapons[i].available) {
                 SetWeaponDisplay(i, false, false, true);
             } else if (pwc.Weapons[i].available) {
                 SetWeaponDisplay(i, false, true, false);

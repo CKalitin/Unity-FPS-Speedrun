@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rateOfAttack: 0.65
-  attackDamage: 4
+  attackDamage: 7
   attackRange: 2
   dealDamageDelay: 0.28
   attackPosition: {fileID: 5798688977095364995}
@@ -81,6 +81,7 @@ MonoBehaviour:
     volumeMax: 0.45
   damager: {fileID: 8549607390731455789}
   animator: {fileID: 5798688976128762513}
+  useAnimations: 0
 --- !u!114 &8549607390731455789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5798688977095364994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
