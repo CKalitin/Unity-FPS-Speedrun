@@ -5,9 +5,9 @@ Build / Full game:
 https://ckalitin.itch.io/i-made-this-in-one-day-and-its-better-than-everyone-elses-projects
 
 Hopefully under 24 hours total
-Total: 30.5h
-im too lazy to change the title ^
-Nov 28: 5.5h
-Nov 29: 10h
-Nov 30: 13h
-Dec 1: 2h
+\nTotal: 30.5h
+\nim too lazy to change the title ^
+\nNov 28: 5.5h
+\nNov 29: 10h
+\nNov 30: 13h
+\nDec 1: 2h
