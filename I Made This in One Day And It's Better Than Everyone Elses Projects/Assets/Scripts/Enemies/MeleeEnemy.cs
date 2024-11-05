@@ -37,26 +37,14 @@ public class MeleeEnemy : MonoBehaviour {
         float speed = (transform.position - previousPos).magnitude / Time.deltaTime;
         previousPos = transform.position;
         
-        if (attacking) {
-            animator.SetBool("running", false);
-            animator.SetBool("walking", false);
-            animator.SetBool("attacking", true);
-            animator.SetBool("idle", false);
-        } else if (speed >= 0.5f) {
-            animator.SetBool("running", true);
-            animator.SetBool("walking", false);
-            animator.SetBool("attacking", false);
-            animator.SetBool("idle", false);
-        } else if (speed >= 0.1f) {
-            animator.SetBool("running", false);
-            animator.SetBool("walking", true);
-            animator.SetBool("attacking", false);
-            animator.SetBool("idle", false);
-        }else {
-            animator.SetBool("running", false);
-            animator.SetBool("walking", false);
-            animator.SetBool("attacking", false);
-            animator.SetBool("idle", true);
-        }
+        animator.SetBool("running", false);
+        animator.SetBool("walking", false);
+        animator.SetBool("attacking", false);
+        animator.SetBool("idle", false);
+        
+        if (attacking) animator.SetBool("attacking", true);
+        else if (speed >= 0.5f) animator.SetBool("running", true);
+        else if (speed >= 0.1f) animator.SetBool("walking", true);
+        else animator.SetBool("idle", true);
     }
 }
